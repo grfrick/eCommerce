@@ -14,7 +14,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="<c:url value="/resources/images/ecm-background4.jpg" />" alt="Primeiro slide">
+          <img class="first-slide home-image" src="<c:url value="/resources/images/ecm-background4.jpg" />" alt="Primeiro slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Bem vindo ao eCommerce</h1>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="<c:url value="/resources/images/ecm-background5.jpg" />" alt="Segundo slide">
+          <img class="second-slide home-image" src="<c:url value="/resources/images/ecm-background5.jpg" />" alt="Segundo slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Smartphone e amor. Smartphone e vida.</h1>
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="<c:url value="/resources/images/ecm-background3.jpg" />" alt="Terceiro slide">
+          <img class="third-slide home-image" src="<c:url value="/resources/images/ecm-background3.jpg" />" alt="Terceiro slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Mais uma boa razao.</h1>
