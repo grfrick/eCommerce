@@ -1,5 +1,5 @@
-# poc-dimed
-Repository to Dimed POC
+# poc-ecommerce
+Repository to POC
 
 * http://www.h2database.com/html/main.html
 * https://tomcat.apache.org/download-80.cgi
