@@ -38,20 +38,18 @@
 . Angular JS
 . Junit
 
-- Opções por essas tecnologias, maior facilidade de desenvolvimento, acesso a documentação rica, tecnologias atuais. Banco de dados em memoria para facilitar (configuração e os testes) e para ser mais leve para trabalhar junto com o tomcat.
+- > Opções por essas tecnologias, maior facilidade de desenvolvimento, acesso a documentação rica, tecnologias atuais. Banco de dados em memoria para facilitar (configuração e os testes) e para ser mais leve para trabalhar junto com o tomcat.
 
 
 # Revisar:
-- Esta com erro de acesso:
+- Features erro (ainda):
 
 .1- logout 
- --> rever back-end
  
 .2- adicionar ao carrinho de compras 
-.. -> rever back-end
 
 .3- fluxo de fechamento de pedido 
-.. não foi testado -> ajustar #2 primeiro
+.. não foi testado -> ajustar #2 primeiro para validar esse
 
 .3- testes unitários
 .. está somente com as "cascas" (implementar as lógicas para acertividade)
