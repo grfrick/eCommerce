@@ -1,18 +1,19 @@
 package com.ecommerce.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import javax.validation.constraints.Min;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.Serializable;
+import java.util.List;
+
 @Entity
-public class Product {
-	
+public class Product implements Serializable {
+
+	private static final long serialVersionUID = 7554536519412523840L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String productID;
@@ -33,6 +34,16 @@ public class Product {
 
 	@Transient
 	private MultipartFile productImage;
+
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<CartItem> cartItemList;
+
+	public List<CartItem> getCartItemList() {
+		return cartItemList;
+	}
+	public void setCartItemList(List<CartItem> cartItemList) {
+		this.cartItemList = cartItemList;
+	}
 
 	public String getProductID() {
 		return productID;

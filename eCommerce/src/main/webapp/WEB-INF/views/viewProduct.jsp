@@ -48,7 +48,7 @@
 						<p data-ng-controller="cartCtrl">
 							<a href="<c:url value="${url}" />" class="btn btn-default">Back</a>
 							<a href="#" class="btn btn-warning btn-large" data-ng-click="addToCart('${product.productID}')">
-							<span class="glyphicon glyphicon-shopping-cart"></span> Peca agora</a>
+							<span class="glyphicon glyphicon-shopping-cart"></span> Pegue agora</a>
 							<a href="<spring:url value="/cart" />" class="btn btn-default">
 							<span class="glyphicon glyphicon-hand-right"></span> Ver carrinho</a>
 						</p>
