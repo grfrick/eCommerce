@@ -8,7 +8,7 @@
 * http://getbootstrap.com/docs/3.3/examples/carousel/	
 * https://docs.spring.io/spring-security/site/docs/3.0.x/reference/appendix-schema.html
 
---> Para rodar com o H2, na primeira versão, rodar os scripts:
+- > Para rodar com o H2, na primeira versão, rodar os scripts:
 
   create table users(
       username varchar_ignorecase(50) not null primary key,
@@ -21,7 +21,7 @@
       constraint fk_authorities_users foreign key(username) references users(username));
       create unique index ix_auth_username on authorities (username,authority);
       
- --> Para rodar com o H2, nas versões seguintes: olhar as imagens anexas
+ - > Para rodar com o H2, nas versões seguintes: olhar as imagens anexas
 
 - Usado por enquanto      
 . Intellij 
