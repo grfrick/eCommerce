@@ -3,6 +3,7 @@ package com.ecommerce.model;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -16,7 +17,7 @@ public class Product implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String productID;
+	private int productId;
 	
 	@NotEmpty (message = "Nome do produto nao pode ser nulo.")
 	public String productName;
@@ -36,6 +37,7 @@ public class Product implements Serializable {
 	private MultipartFile productImage;
 
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JsonIgnore
 	private List<CartItem> cartItemList;
 
 	public List<CartItem> getCartItemList() {
@@ -45,11 +47,12 @@ public class Product implements Serializable {
 		this.cartItemList = cartItemList;
 	}
 
-	public String getProductID() {
-		return productID;
+	public int getProductId() {
+		return productId;
 	}
-	public void setProductID(String productID) {
-		this.productID = productID;
+
+	public void setProductId(int productId) {
+		this.productId = productId;
 	}
 
 	public String getProductName() {

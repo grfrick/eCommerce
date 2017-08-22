@@ -17,7 +17,7 @@
 			<div class="container" data-ng-app="cartApp">
 				<div class="row">
 					<div class="col-md-5">
-						<img src="<c:url value="/resources/images/${product.productID}.png" /> " alt="image" style="width:100%"/>
+						<img src="<c:url value="/resources/images/${product.productId}.png" /> " alt="image" style="width:100%"/>
 					</div>
 					
 					<div class="col-md-5">
@@ -40,15 +40,15 @@
 						<br>
 						
 						<c:set var="role" scope="page" value="${param.role}" />
-						<c:set var="url" scope="page" value="/productList" />
+						<c:set var="url" scope="page" value="/product/productList" />
 						<c:if test="${role=='admin'}">
 							<c:set var="url" scope="page" value="/admin/productInventory" />
 						</c:if>
 						
 						<p data-ng-controller="cartCtrl">
 							<a href="<c:url value="${url}" />" class="btn btn-default">Back</a>
-							<a href="#" class="btn btn-warning btn-large" data-ng-click="addToCart('${product.productID}')">
-							<span class="glyphicon glyphicon-shopping-cart"></span> Peca agora</a>
+							<a href="#" class="btn btn-warning btn-large" data-ng-click="addToCart('${product.productId}')">
+							<span class="glyphicon glyphicon-shopping-cart"></span> Pegue agora</a>
 							<a href="<spring:url value="/cart" />" class="btn btn-default">
 							<span class="glyphicon glyphicon-hand-right"></span> Ver carrinho</a>
 						</p>

@@ -21,7 +21,7 @@
 				<a href="<c:url value="/admin/productInventory" />" >Inventario de Produto</a>
 			</h3>
 			
-			<p>Aqui você pode ver, verificar e modificar o inventario do produto.</p>
+			<p>Aqui voce pode ver, verificar e modificar o inventario do produto.</p>
 			
 
 <%@include file="/WEB-INF/views/template/footer.jsp" %>

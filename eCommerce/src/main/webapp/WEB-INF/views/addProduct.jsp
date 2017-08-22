@@ -12,7 +12,7 @@
 				<p class="lead">Preencha as informacaes abaixo para adicionar um produto:</p>
 			</div>
 			
-			<form:form action="${pageContext.request.contextPath}/admin/productInventory/addProduct" method="post" commandName="product" enctype="multipart/form-data">
+			<form:form action="${pageContext.request.contextPath}/admin/product/addProduct" method="post" commandName="product" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="name">Nome</label>
 					<form:errors path="productName" cssStyle="color: #ff0000" />

@@ -11,7 +11,7 @@ public class ProductDaoDummy {
 	
 	public List<Product> getProductList(){
 		Product product1 = new Product();
-		product1.setProductID("3");
+		product1.setProductId(3);
 		product1.setProductName("iphone");
 		product1.setProductCategory("smartphone");
 		product1.setProductDescription("Sensacional");
@@ -22,7 +22,7 @@ public class ProductDaoDummy {
 		product1.setProductManufacturer("Apple");
 		
 		Product product2 = new Product();
-		product2.setProductID("2");
+		product2.setProductId(2);
 		product2.setProductName("MacBook");
 		product2.setProductCategory("notebook");
 		product2.setProductDescription("Que maquina");
@@ -33,7 +33,7 @@ public class ProductDaoDummy {
 		product2.setProductManufacturer("Apple");
 		
 		Product product3 = new Product();
-		product3.setProductID("1");
+		product3.setProductId(1);
 		product3.setProductName("Ipad");
 		product3.setProductCategory("tablet");
 		product3.setProductDescription("aquele portatil joiaa");
@@ -50,9 +50,9 @@ public class ProductDaoDummy {
 		return productList;
 	}
 
-	public Product getProductByID(String productID) throws IOException {
+	public Product getProductByID(int productId) throws IOException {
 		for (Product product : getProductList()) {
-			if (product.getProductID().equals(productID)) {
+			if (product.getProductId() == productId) {
 				return product;
 			}
 		}

@@ -47,11 +47,12 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="<c:url value="/"/>" >Inicio</a></li>
-                <li><a href="<c:url value="/productList"/>" >Produtos</a></li>
+                <li><a href="<c:url value="/product/productList"/>" >Produtos</a></li>
                 <li><a href="#contact">Contato</a></li>
               </ul>
               <ul class="nav navbar-nav pull-right">
               	<li><a href="<c:url value="/admin" />">Administrador</a></li>
+                <li><a href="<c:url value="/register" />">Cliente</a></li>
               </ul>
             </div>
           </div>

@@ -24,15 +24,15 @@ cartApp.controller("cartCtrl", function ($scope, $http) {
 		$scope.refreshCart(cartID);
 	};
 	
-	$scope.addToCart = function (productID, header, token) {
-		$http.put('/eCommerce/rest/cart/add/' + productID, {csrf_token: token}).success(function (data) {
+	$scope.addToCart = function (productId, header, token) {
+		$http.put('/eCommerce/rest/cart/add/' + productId, {csrf_token: token}).success(function (data) {
 			$scope.refreshCart($http.get('/eCommerce/rest/cart/cartID'));
 			alert("Produto adicionado com sucesso ao carrinho.")
 		});
 	};;
 	
-	$scope.removeFromCart = function (productID) {
-		$http.put('/eCommerce/rest/cart/remove/' + productID).success(function (data) {
+	$scope.removeFromCart = function (productId) {
+		$http.put('/eCommerce/rest/cart/remove/' + productId).success(function (data) {
 			$scope.refreshCart($http.get('/eCommerce/rest/cart/cartID'));
 		});
 	}
