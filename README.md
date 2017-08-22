@@ -51,3 +51,4 @@ Repository to POC
 .. não foi testado -> ajustar #2 primeiro
 
 .3- testes unitários
+.. está somente com as "cascas" (implementar as lógicas para acertividade)
