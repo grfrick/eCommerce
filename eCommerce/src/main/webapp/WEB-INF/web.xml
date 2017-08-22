@@ -27,7 +27,6 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <!-- Configuring spring filter proxy -->
     <filter>
         <display-name>springMultipartFilter</display-name>
         <filter-name>springMultipartFilter</filter-name>
@@ -43,7 +42,7 @@
     </filter>
     <filter-mapping>
         <filter-name>springSecurityFilterChain</filter-name>
-        <url-pattern>/*</url-pattern>   <!-- / is the root and whatever content after that would be intercepted by filter -->
+        <url-pattern>/*</url-pattern>
         <dispatcher>ERROR</dispatcher>
         <dispatcher>FORWARD</dispatcher>
         <dispatcher>REQUEST</dispatcher>

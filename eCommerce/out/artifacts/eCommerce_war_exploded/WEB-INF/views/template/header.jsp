@@ -51,8 +51,23 @@
                 <li><a href="#contact">Contato</a></li>
               </ul>
               <ul class="nav navbar-nav pull-right">
-              	<li><a href="<c:url value="/admin" />">Administrador</a></li>
-                <li><a href="<c:url value="/register" />">Cliente</a></li>
+                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                  <li><a>Bem-vindo: ${pageContext.request.userPrincipal.name}</a></li>
+                  <li><a href="<c:url value="/j_spring_security_logout" />">Desconectar</a></li>
+
+                  <c:if test="${pageContext.request.userPrincipal.name.trim().toLowerCase() != 'admin'}">
+                    <li><a href="<c:url value="/customer/cart" />">Carrinho</a></li>
+                  </c:if>
+
+                  <c:if test="${pageContext.request.userPrincipal.name.trim().toLowerCase() == 'admin'}">
+                    <li><a href="<c:url value="/admin" />">Administrador</a></li>
+                  </c:if>
+                </c:if>
+
+                <c:if test="${pageContext.request.userPrincipal.name == null}">
+              	  <li><a href="<c:url value="/login" />">Entrar</a></li>
+                  <li><a href="<c:url value="/register" />">Cliente</a></li>
+                </c:if>
               </ul>
             </div>
           </div>
