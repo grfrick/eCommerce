@@ -54,10 +54,7 @@
 		username-parameter="username"
 		password-parameter="password" />
 	<security:logout
-		logout-success-url="/login?logout"
-		logout-url="/login?logout" 
-		invalidate-session="true"
-		/>
+		logout-success-url="/login?logout" />
     <!-- <security:csrf disabled="true"/>  -->
     <security:csrf />
 </security:http>

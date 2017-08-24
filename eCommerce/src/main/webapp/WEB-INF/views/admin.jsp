@@ -13,10 +13,14 @@
 
 			<c:if test="${pageContext.request.userPrincipal.name != null }">
 				<h2>
-					Bem-vindo: ${pageContext.request.userPrincipal.name} | <a href="<c:url value="/j_spring_security_logout" /> "> Sair</a>
+					<c:url value="/j_spring_security_logout" var="logoutUrl"/>
+					<form action="${logoutUrl}" method="post">
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+						Bem-vindo: ${pageContext.request.userPrincipal.name} | <input type="submit" value="Sair" class="btn btn-link"/>
+					</form>
 				</h2>
 			</c:if>
-			
+
 			<h3> 
 				<a href="<c:url value="/admin/productInventory" />" >Inventario de Produto</a>
 			</h3>

@@ -6,10 +6,12 @@
 			<h2>Entrar</h2>
 			
 			<c:if test="${not empty msg}">
-				<div class="msg">${msg}</div>
+				<div class="alert alert-warning" role="alert">
+					${msg}
+				</div>
 			</c:if>
 
-			<form name="loginForm" action="<c:url value="j_spring_security_check" />" method = "post">
+			<form name="loginForm" action="<c:url value="/j_spring_security_check" />" method = "post">
 				<c:if test="${not empty error}">
 					<div class="error" style="color: #ff0000">${error}</div>
 				</c:if>

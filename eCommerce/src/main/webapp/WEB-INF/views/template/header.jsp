@@ -53,7 +53,6 @@
               <ul class="nav navbar-nav pull-right">
                 <c:if test="${pageContext.request.userPrincipal.name != null}">
                   <li><a>Bem-vindo: ${pageContext.request.userPrincipal.name}</a></li>
-                  <li><a href="<c:url value="/j_spring_security_logout" />">Desconectar</a></li>
 
                   <c:if test="${pageContext.request.userPrincipal.name.trim().toLowerCase() != 'admin'}">
                     <li><a href="<c:url value="/customer/cart" />">Carrinho</a></li>
@@ -62,6 +61,14 @@
                   <c:if test="${pageContext.request.userPrincipal.name.trim().toLowerCase() == 'admin'}">
                     <li><a href="<c:url value="/admin" />">Administrador</a></li>
                   </c:if>
+
+                  <li style="text-align: center">
+                    <c:url value="/j_spring_security_logout" var="logoutUrl"/>
+                    <form action="${logoutUrl}" method="post">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <input type="submit" value="Sair" class="btn btn-link btn-xs"/>
+                    </form>
+                  </li>
                 </c:if>
 
                 <c:if test="${pageContext.request.userPrincipal.name == null}">
