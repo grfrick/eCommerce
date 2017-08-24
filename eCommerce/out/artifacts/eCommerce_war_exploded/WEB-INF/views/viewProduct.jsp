@@ -47,12 +47,14 @@
 						
 						<p data-ng-controller="cartCtrl">
 							<a href="<c:url value="${url}" />" class="btn btn-default">Back</a>
-							<a href="#" class="btn btn-warning btn-large" data-ng-click="addToCart('${product.productId}')">
-								<span class="glyphicon glyphicon-shopping-cart"></span> Pegue agora
-							</a>
-							<a href="<spring:url value="/customer/cart" />" class="btn btn-default">
-								<span class="glyphicon glyphicon-hand-right"></span> Ver carrinho
-							</a>
+                            <c:if test="${pageContext.request.userPrincipal.name == null || pageContext.request.userPrincipal.name.trim().toLowerCase() != 'admin'}">
+                                <a href="#" class="btn btn-warning btn-large" data-ng-click="addToCart('${product.productId}')">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Pegue agora
+                                </a>
+                                <a href="<spring:url value="/customer/cart" />" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-hand-right"></span> Ver carrinho
+                                </a>
+                            </c:if>
 						</p>
 					</div>
 				</div>

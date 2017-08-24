@@ -73,7 +73,7 @@
 
                 <c:if test="${pageContext.request.userPrincipal.name == null}">
               	  <li><a href="<c:url value="/login" />">Entrar</a></li>
-                  <li><a href="<c:url value="/register" />">Cliente</a></li>
+                  <li><a href="<c:url value="/register" />">Registrar</a></li>
                 </c:if>
               </ul>
             </div>
