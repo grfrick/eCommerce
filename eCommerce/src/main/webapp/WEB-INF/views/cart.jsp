@@ -19,7 +19,7 @@
 				<a class="btn btn-danger btn-sm pull-left" data-ng-click="clearCart()">
 					<span class="glyphicon glyphicon-remove-sign"></span> Limpar carrinho
 				</a>
-				<a class="btn btn-info btn-sm pull-right" href="<spring:url value="/customer/order/${cartId}"/> " >
+				<a class="btn btn-info btn-sm pull-right" href="<spring:url value="/order/${cartId}"/> " >
 					<span class="glyphicon glyphicon-shopping-cart"></span> Realizar Compra
 				</a>
 			</div>

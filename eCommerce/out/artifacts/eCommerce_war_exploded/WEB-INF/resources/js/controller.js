@@ -28,7 +28,7 @@ cartApp.controller("cartCtrl", function ($scope, $http) {
 		$http.put('/eCommerce/rest/cart/add/' + productId, {csrf_token: token}).success(function () {
 			alert("Produto adicionado com sucesso ao carrinho.")
 		});
-	};;
+	};
 	
 	$scope.removeFromCart = function (productId) {
 		$http.put('/eCommerce/rest/cart/remove/' + productId).success(function (data) {

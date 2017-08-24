@@ -7,17 +7,15 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h1>Carrinho iovalido.</h1>
+                    <h1>Carrinho Invalido.</h1>
                 </div>
             </div>
         </section>
 
         <section class="container" >
-
             <p>
                 <a href="<spring:url value="/product/productList"/> " class="btn btn-default">Produtos</a>
             </p>
-
         </section>
     </div>
 </div>

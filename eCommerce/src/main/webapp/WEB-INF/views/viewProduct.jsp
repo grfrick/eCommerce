@@ -35,7 +35,7 @@
 							<strong>Condicao</strong> :
 							${product.productCondition}</p>
 						
-						<h4>${product.productPrice} R$</h4>
+						<h4>R$ ${product.productPrice}</h4>
 						
 						<br>
 						
