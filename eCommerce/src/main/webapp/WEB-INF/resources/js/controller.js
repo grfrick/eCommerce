@@ -39,7 +39,7 @@ cartApp.controller("cartCtrl", function ($scope, $http) {
     $scope.calGrandTotal = function (productId) {
         var grandTotal=0;
 
-        for (int i=0; i < $scope.cart.cartItems.length; i++) {
+        for (i=0; i < $scope.cart.cartItems.length; i++) {
         	grandTotal+=$scope.cart.cartItems[i].totalPrice;
 		}
 

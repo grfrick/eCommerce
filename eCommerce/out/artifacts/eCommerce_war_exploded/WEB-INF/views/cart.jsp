@@ -16,10 +16,11 @@
 		<section class="container" data-ng-app="cartApp">
 			<div data-ng-controller = "cartCtrl" data-ng-init="initCartId('${cartID}')">
 			<div>
-				<a class="btn btn-danger pull-left" data-ng-click="clearCart()">
-				<span class="glyphicon glyphicon-remove-sign"></span> Limpar carrinho</a>
-				<a href="<spring:url value="/customer/order/${cartId}"/>" class="btn btn-default">
-					<span class="glyphicon-shopping-cart glyphicon">Realizar Compra</span>
+				<a class="btn btn-danger btn-sm pull-left" data-ng-click="clearCart()">
+					<span class="glyphicon glyphicon-remove-sign"></span> Limpar carrinho
+				</a>
+				<a class="btn btn-info btn-sm pull-right" href="<spring:url value="/customer/order/${cartId}"/> " >
+					<span class="glyphicon glyphicon-shopping-cart"></span> Realizar Compra
 				</a>
 			</div>
 			<table class="table table-hover">
@@ -46,7 +47,7 @@
 					<th></th>
 				</tr>
 			</table>
-			<a href="<spring:url value="/productList"/> " class="btn btn-default">Continue comprando</a>
+			<a href="<spring:url value="/product/productList"/> " class="btn btn-default">Continue comprando</a>
 			</div>
 		</section>
 	</div>
