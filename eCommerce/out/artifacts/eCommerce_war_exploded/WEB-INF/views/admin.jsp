@@ -22,10 +22,17 @@
 			</c:if>
 
 			<h3> 
-				<a href="<c:url value="/admin/productInventory" />" >Inventario de Produto</a>
+				<a href="<c:url value="/admin/productInventory" />" >Inventario de Produtos</a>
 			</h3>
 			
-			<p>Aqui voce pode ver, verificar e modificar o inventario do produto.</p>
-			
+			<p>Aqui voce pode ver, verificar e modificar o inventario dos produtos.</p>
+
+            <br><br>
+
+            <h3>
+                <a href="<c:url value="/admin/customer" />" >Gestao de clientes</a>
+            </h3>
+
+            <p>Aqui voce pode ver as informacoes dos clientes.</p>
 
 <%@include file="/WEB-INF/views/template/footer.jsp" %>

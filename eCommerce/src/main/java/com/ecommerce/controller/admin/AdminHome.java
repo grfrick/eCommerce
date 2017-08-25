@@ -1,6 +1,8 @@
 package com.ecommerce.controller.admin;
 
+import com.ecommerce.model.Customer;
 import com.ecommerce.model.Product;
+import com.ecommerce.service.CustomerService;
 import com.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,9 @@ public class AdminHome {
     @Autowired
     private ProductService productService;
 
+    @Autowired
+    private CustomerService customerService;
+
     @RequestMapping
     public String adminPage() {
         return "admin";
@@ -32,8 +37,10 @@ public class AdminHome {
 
     @RequestMapping("/customer")
     public String customerManagement(Model model) {
+        List<Customer> customerList = customerService.getAllCustumers();
 
-        // FIXME adicionar servico de cliente depois
+        model.addAttribute("customerList", customerList);
+
         return "customerManagement";
     }
 }

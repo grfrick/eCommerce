@@ -17,12 +17,12 @@
         <h3>Informacoes Basicas</h3>
 
         <div class="form-group">
-            <label for="name">Nome</label>
+            <label for="name">Nome</label><form:errors path="customerName" cssStyle="color: #ff0000" />
             <form:input path="customerName" id="name" class="form-Control" />
         </div>
 
         <div class="form-group">
-            <label for="email">E-Mail</label>
+            <label for="email">E-Mail</label><span style="color: #ff0000">${emailMsg}</span><form:errors path="customerEmail" cssStyle="color: #ff0000" />
             <form:input path="customerEmail" id="email" class="form-Control" />
         </div>
 
@@ -32,16 +32,16 @@
         </div>
 
         <div class="form-group">
-            <label for="name">Usuario</label>
+            <label for="name">Usuario</label><span style="color: #ff0000">${usernameMsg}</span><form:errors path="username" cssStyle="color: #ff0000" />
             <form:input path="username" id="username" class="form-Control" />
         </div>
 
         <div class="form-group">
-            <label for="name">Senha</label>
+            <label for="name">Senha</label><form:errors path="password" cssStyle="color: #ff0000" />
             <form:password path="password" id="password" class="form-Control" />
         </div>
 
-
+        
         <h3>Endereco</h3>
 
         <div class="form-group">
