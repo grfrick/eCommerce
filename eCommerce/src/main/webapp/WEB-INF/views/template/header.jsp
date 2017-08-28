@@ -11,6 +11,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <meta name="_csrf_token" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
+
     <link rel="icon" href="../../favicon.ico">
 
     <title>E-Commerce</title>
