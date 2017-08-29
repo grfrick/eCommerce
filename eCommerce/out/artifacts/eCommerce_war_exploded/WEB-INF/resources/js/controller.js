@@ -18,10 +18,6 @@ cartApp.config(['$httpProvider', 'CSRF_TOKEN',
         $httpProvider.defaults.headers.post['X-CSRFToken'] = CSRF_TOKEN;
     }])
 
-//cartApp.config(function ($httpProvider){
-//	$httpProvider.defaults.headers.post['X-CSRFToken'] = $('input[name=csrfmiddlewaretoken]').val();
-//})
-
 cartApp.controller('cartCtrl', function ($scope, $http) {
 
 	$scope.refreshCart = function () {
@@ -36,7 +32,7 @@ cartApp.controller('cartCtrl', function ($scope, $http) {
 	
 	$scope.initCartId = function (cartID) {
 		$scope.cartID = cartID;
-		$scope.refreshCart(cartID);
+		$scope.refreshCart();
 	};
 	
 	$scope.addToCart = function (productId) {

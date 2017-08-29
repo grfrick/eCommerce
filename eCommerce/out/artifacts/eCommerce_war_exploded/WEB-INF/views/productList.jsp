@@ -7,12 +7,37 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="/WEB-INF/views/template/header.jsp" %>
 
+    <script>
+        $(document).ready(function() {
+            $('#w-input-search').autocomplete({
+                serviceUrl: '${pageContext.request.contextPath}/getProducts',
+                paramName: "productName",
+                delimiter: ",",
+                transformResult: function(response) {
+                    return {
+                        suggestions: $.map($.parseJSON(response), function(item) {
+                            return { value: item.productName, data: item.productId };
+                        })
+                    };
+                }
+            });
+        });
+    </script>
+
     <div class="container-wrapper">
     	<div class="container">
 			<div class="page-header">
 				<h1>Todos produtos</h1>
 				<p class="lead">Confira todos os incriveis produtos disponiveis agora!</p>
 			</div>
+
+            <form:form action="${pageContext.request.contextPath}/product/searchProduct" method="post" commandName="productSearch" cssClass="form-inline">
+                <div class="mb-2 mr-sm-2 mb-sm-0">
+                    <label for="w-input-search">Produto</label>
+                    <form:input path="productName" id="w-input-search" class="form-Control mb-2 mr-sm-2 mb-sm-0" />
+                    <input type="submit" value="buscar" class="btn btn-primary">
+                </div>
+            </form:form>
 
 			<table class="table table-striped table-hover">
 				<thead>
@@ -45,5 +70,4 @@
                 </tbody>
 			</table>
 
-      <!-- LEAD TO FOOTER FILE template/footer.jsp-->
 <%@include file="/WEB-INF/views/template/footer.jsp" %>

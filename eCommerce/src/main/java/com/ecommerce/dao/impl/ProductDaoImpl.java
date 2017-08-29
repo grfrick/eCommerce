@@ -51,4 +51,14 @@ public class ProductDaoImpl implements ProductDao{
 		session.delete(product);
 		session.flush();
 	}
+
+	@Override
+	public List<Product> getProductByName(String productName) {
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("from Product where productName like ?");
+		query.setString(0, productName);
+		List<Product> productList = query.list();
+		session.flush();
+		return productList;
+	}
 }

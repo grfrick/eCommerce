@@ -27,17 +27,17 @@
         </div>
 
         <div class="form-group">
-            <label for="name">Telefone</label>
+            <label for="phone">Telefone</label>
             <form:input path="custumerPhone" id="phone" class="form-Control" />
         </div>
 
         <div class="form-group">
-            <label for="name">Usuario</label><span style="color: #ff0000">${usernameMsg}</span><form:errors path="username" cssStyle="color: #ff0000" />
+            <label for="username">Usuario</label><span style="color: #ff0000">${usernameMsg}</span><form:errors path="username" cssStyle="color: #ff0000" />
             <form:input path="username" id="username" class="form-Control" />
         </div>
 
         <div class="form-group">
-            <label for="name">Senha</label><form:errors path="password" cssStyle="color: #ff0000" />
+            <label for="password">Senha</label><form:errors path="password" cssStyle="color: #ff0000" />
             <form:password path="password" id="password" class="form-Control" />
         </div>
 

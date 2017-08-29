@@ -5,9 +5,7 @@ import com.ecommerce.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -24,6 +22,9 @@ public class ProductController {
         List<Product> products = productService.getProductList();
         model.addAttribute("products", products);
 
+        Product product =  new Product();
+        model.addAttribute("productSearch", product);
+
         return "productList";
     }
 
@@ -33,5 +34,24 @@ public class ProductController {
         model.addAttribute("product", product);
 
         return "viewProduct";
+    }
+
+    @RequestMapping(value = "/searchProduct", method = RequestMethod.POST)
+    public String searchProduct(@ModelAttribute("productSearch") Product product, Model model) throws IOException {
+        product.setProductName(product.getProductName() + "%");
+
+        List<Product> productList = productService.getProductByName(product.getProductName());
+        model.addAttribute("products", productList);
+
+        product.setProductName("");
+        model.addAttribute("productSearch", product);
+
+        return "productList";
+    }
+
+    @RequestMapping(value = "/getProducts", method = RequestMethod.GET)
+    public @ResponseBody
+    List<Product> getProducts(@RequestParam String productName) {
+        return productService.getProductByName(productName);
     }
 }
