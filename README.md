@@ -44,12 +44,11 @@
 # Revisar:
 - Features erro (ainda):
 
-.1- logout 
- 
-.2- adicionar ao carrinho de compras 
+.1- adicionar ao carrinho de compras  
+.. ver o scrf
 
 .3- fluxo de fechamento de pedido 
-.. não foi testado -> ajustar #2 primeiro para validar esse
+.. não foi testado
 
 .3- testes unitários
-.. está somente com as "cascas" (implementar as lógicas para acertividade)
+.. implementar o conteudo
